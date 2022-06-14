@@ -1,25 +1,31 @@
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import {Hero} from './types';
+import styles from '../../styles/Heroes.module.css'
+import Card from '../../components/Card';
+import Image from 'next/image';
 
 export interface Heroes {
     heroes: Hero[];
 }
 
-const mapFn = (hero: Hero ) => {
-    return <div key={hero.id}>
-        <h3>{hero.name}</h3>
-        <img src={hero.images.md} alt={hero.name}></img>
-    </div>
-  
-    }
   
 const Heroes: NextPage <{response: Heroes }> = (props) => {     
     const {response} = props
     const {heroes} = response;
            
     return <>
-        {heroes.map(mapFn)}
+     <div className={styles.title_container}>
+        <Image src='/images/Hero-logo.png' height='60' width='60' alt='HeroNext'/>
+        <h1 className={styles.title}>HeroNext</h1>
+        <Image src='/images/Hero-logo.png' height='60' width='60' alt='HeroNext'/>
+     </div>
+    
+    <div  className={styles.heroes_container}>
+        {heroes.map((hero)=>(
+            <Card key={hero.id} hero={hero}/>
+        ))}
+     </div>
      </>
 }
 
