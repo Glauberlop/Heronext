@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
-import {Hero} from './types';
+import {Hero} from '../types/types';
 import styles from '../styles/Home.module.css'
 import Card from '../components/Card';
 import Image from 'next/image';

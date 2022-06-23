@@ -1,5 +1,5 @@
 
-import {Hero} from '../types';
+import {Hero} from '../../types/types';
 import styles from '../../styles/Hero.module.css';
 
 export const getStaticPaths = async() => {
