@@ -8,10 +8,9 @@ const About: NextPage = () =>{
             <h1>
                 Sobre o Projeto
             </h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                 Dolores impedit et molestias. Labore asperiores nisi error 
-                 delectus autem harum eum illum mollitia in perferendis consequuntur 
-                 nesciunt fugiat possimus, magnam perspiciatis.
+            <p> Projeto pessoal de estudo e aprimoração do ReactJS, TypeScript e NextJS.
+            </p>
+            <p> A ideia é futuramente trazer um game estilo Super Trunfo! 
             </p>
             <Image src="/images/Pantera-Negra.png" height='300' width='300' alt='Pantera-Negra'/>
         </div>

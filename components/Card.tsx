@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {Hero} from '../pages/heroes/types';
+import {Hero} from '../pages/types';
 import styles from '../styles/Card.module.css'
 
 

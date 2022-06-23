@@ -1,0 +1,49 @@
+
+
+.hero_container {
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    margin: auto;
+    width: 30%;
+    border-radius: 1em;
+    border: 2px solid  rgb(18, 147, 65);
+    background-color: #333;
+    color: #fff;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, .5);
+}
+
+.powerstats_container {
+    width: 50%;
+    margin: .5em;
+    padding: .5em;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+    font-size: 20px;
+       
+}
+.title {
+    text-align: center;
+    padding: .1em;
+}
+
+.powerstats_title{
+    margin: .3em;
+}
+.statsValue{
+    padding-top: 7px;
+    text-align: center;
+    color:#fff;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(120deg,  #30a54a, #1b8036);
+    border-radius: 8px; 
+    margin-left: 1.5em;
+  }
+
+
+
+  
