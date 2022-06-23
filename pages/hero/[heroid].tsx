@@ -1,8 +1,6 @@
 
 import {Hero} from '../types';
-import styles from '../../styles/Hero.module.css'
-
-
+import styles from '../../styles/Hero.module.css';
 
 export const getStaticPaths = async() => {
 
@@ -26,7 +24,7 @@ export const getStaticPaths = async() => {
         fallback: false,
       }     
 }
-export const getStaticProps = async (context:{context:any}) => {
+export const getStaticProps = async (context:{params: any;context:any}) => {
     const id = context.params.heroid
   
     const response = await fetch(`https://akabab.github.io/superhero-api/api/id/${id}.json`)
