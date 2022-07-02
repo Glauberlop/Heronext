@@ -27,15 +27,27 @@ export const getStaticPaths = async() => {
 export const getStaticProps = async (context:{params: any;context:any}) => {
     const id = context.params.heroid
   
-    const response = await fetch(`https://akabab.github.io/superhero-api/api/id/${id}.json`)
+   try{ const response = await fetch(`https://akabab.github.io/superhero-api/api/id/${id}.json`)
   
     const data = await response.json()
   
     return {
       props: { hero: data },
     }
-  }
-const Hero = ({hero}:{hero:Hero}) => {
+  }catch(error){
+    return {
+        props: { hero: null },
+      }
+  }};
+
+
+
+const Hero = ({hero}:{hero:Hero | null} ) => {
+    if (hero == null){
+        return <div>
+            <h1>NÃO ENCONTRADO</h1>
+        </div>
+    }
     return (
         <div className={styles.hero_container}>
         <div>
